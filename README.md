@@ -1,4 +1,4 @@
-![CI](https://github.com/msfrms/TrachFlutter/workflows/CI/badge.svg)
+![FlutterAndroid](https://github.com/msfrms/TrachFlutter/workflows/FlutterAndroid/badge.svg)
 
 # Trach
 
