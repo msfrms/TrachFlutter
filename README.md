@@ -1,3 +1,5 @@
+![CI](https://github.com/msfrms/TrachFlutter/workflows/CI/badge.svg)
+
 # Trach
 
 Mobile client for Trach
