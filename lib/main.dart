@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'chart/track.dart';
+import 'chart/position.dart';
+
 void main() {
   runApp(TrachApp());
 }
@@ -97,13 +100,11 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            TrackWidget(TrackProps(
+              PositionProps("1", PositionChangeProps("1", PositionChange.increment)),
+              "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg",
+              "Kosandra", "Miyagi & Andy Panda"
+            ))
           ],
         ),
       ),
