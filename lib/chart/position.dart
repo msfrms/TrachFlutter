@@ -1,4 +1,8 @@
+import 'package:Trach/gen/assets.gen.dart';
+import 'package:Trach/gen/colors.gen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:Trach/core/text_styles.dart';
 
 enum PositionChange {
   increment, decrement, unchanged
@@ -8,7 +12,7 @@ enum PositionChange {
 class PositionChangeProps {
   final PositionChange change;
   final String value;
-  PositionChangeProps(this.value, this.change);
+  PositionChangeProps({this.value, this.change});
 }
 
 @immutable
@@ -28,12 +32,12 @@ class PositionChangeWidget extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(right: 3),
                 child: SizedBox(
-                    child: Image(image: AssetImage('resources/arrow_fill_up.png')),
+                    child: Image(image: Assets.images.arrowFillUp),
                     width: 10,
                     height: 10
                 )
             ),
-            Text(props.value)
+            Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.green))
           ],
         );
         break;
@@ -43,17 +47,17 @@ class PositionChangeWidget extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(right: 3),
                 child: SizedBox(
-                    child: Image(image: AssetImage('resources/arrow_fill_down.png')),
+                    child: Image(image: Assets.images.arrowFillDown),
                     width: 10,
                     height: 10
                 )
             ),
-            Text(props.value)
+            Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.red))
           ],
         );
         break;
       case PositionChange.unchanged:
-        widget = Text("-");
+        widget = Text("–", style: TextStyles.medium(fontSize: 16, color: ColorName.gray9F));
         break;
     }
     return widget;
@@ -64,7 +68,7 @@ class PositionChangeWidget extends StatelessWidget {
 class PositionProps {
   final String value;
   final PositionChangeProps change;
-  PositionProps(this.value, this.change);
+  PositionProps({this.value, this.change});
 }
 
 @immutable
@@ -79,7 +83,10 @@ class PositionWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Padding(padding: EdgeInsets.only(bottom: 5), child: Text(props.value)),
+        Padding(
+            padding: EdgeInsets.only(bottom: 5),
+            child: Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.black))
+        ),
         PositionChangeWidget(props.change)
       ],
     );

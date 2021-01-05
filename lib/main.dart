@@ -100,11 +100,20 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            TrackWidget(TrackProps(
-              PositionProps("1", PositionChangeProps("1", PositionChange.increment)),
-              "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg",
-              "Kosandra", "Miyagi & Andy Panda"
-            ))
+            TrackWidget(
+                TrackProps(
+                    position: PositionProps(
+                        value: "1",
+                        change: PositionChangeProps(
+                            value: "2",
+                            change: PositionChange.decrement
+                        )
+                    ),
+                    coverUrl: "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg",
+                    title: "Kosandra",
+                    artists: "Miyagi & Andy Panda"
+                )
+            )
           ],
         ),
       ),
