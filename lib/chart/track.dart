@@ -1,4 +1,7 @@
 import 'package:Trach/chart/position.dart';
+import 'package:Trach/gen/assets.gen.dart';
+import 'package:Trach/gen/colors.gen.dart';
+import 'package:Trach/gen/fonts.gen.dart';
 import 'package:flutter/widgets.dart';
 
 @immutable
@@ -7,7 +10,7 @@ class TrackProps {
   final String coverUrl;
   final String title;
   final String artists;
-  TrackProps(this.position, this.coverUrl, this.title, this.artists);
+  TrackProps({this.position, this.coverUrl, this.title, this.artists});
 }
 
 @immutable
@@ -38,8 +41,25 @@ class TrackWidget extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.only(bottom: 5), child: Text(props.title)),
-            Text(props.artists)
+            Padding(
+                padding: EdgeInsets.only(bottom: 5),
+                child: Text(props.title,
+                    style: TextStyle(
+                        color: ColorName.black,
+                        fontFamily: FontFamily.roboto,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16
+                    )
+                )
+            ),
+            Text(props.artists,
+                style: TextStyle(
+                    color: ColorName.gray9F,
+                    fontFamily: FontFamily.roboto,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16
+                )
+            )
           ],
         )
       ],
@@ -51,7 +71,7 @@ class TrackWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           content,
-          Image(image: AssetImage('resources/more.png')),
+          Image(image: Assets.images.more),
         ],
       ),
     );
