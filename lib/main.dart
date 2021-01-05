@@ -105,8 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     position: PositionProps(
                         value: "1",
                         change: PositionChangeProps(
-                            value: "",
-                            change: PositionChange.unchanged
+                            value: "2",
+                            change: PositionChange.decrement
                         )
                     ),
                     coverUrl: "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg",

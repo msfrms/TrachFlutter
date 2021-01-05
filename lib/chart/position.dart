@@ -1,8 +1,8 @@
 import 'package:Trach/gen/assets.gen.dart';
 import 'package:Trach/gen/colors.gen.dart';
-import 'package:Trach/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:Trach/core/text_styles.dart';
 
 enum PositionChange {
   increment, decrement, unchanged
@@ -37,14 +37,7 @@ class PositionChangeWidget extends StatelessWidget {
                     height: 10
                 )
             ),
-            Text(props.value,
-                style: TextStyle(
-                    color: ColorName.green,
-                    fontFamily: FontFamily.roboto,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16
-                )
-            )
+            Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.green))
           ],
         );
         break;
@@ -59,26 +52,12 @@ class PositionChangeWidget extends StatelessWidget {
                     height: 10
                 )
             ),
-            Text(props.value,
-                style: TextStyle(
-                    color: ColorName.red,
-                    fontFamily: FontFamily.roboto,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16
-                )
-            )
+            Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.red))
           ],
         );
         break;
       case PositionChange.unchanged:
-        widget = Text("–",
-            style: TextStyle(
-                color: ColorName.gray9F,
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w500,
-                fontSize: 16
-            )
-        );
+        widget = Text("–", style: TextStyles.medium(fontSize: 16, color: ColorName.gray9F));
         break;
     }
     return widget;
@@ -106,14 +85,7 @@ class PositionWidget extends StatelessWidget {
       children: [
         Padding(
             padding: EdgeInsets.only(bottom: 5),
-            child: Text(props.value,
-                style: TextStyle(
-                    color: ColorName.black,
-                    fontFamily: FontFamily.roboto,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16
-                )
-            )
+            child: Text(props.value, style: TextStyles.medium(fontSize: 16, color: ColorName.black))
         ),
         PositionChangeWidget(props.change)
       ],

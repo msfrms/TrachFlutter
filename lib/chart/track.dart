@@ -1,7 +1,7 @@
 import 'package:Trach/chart/position.dart';
+import 'package:Trach/core/text_styles.dart';
 import 'package:Trach/gen/assets.gen.dart';
 import 'package:Trach/gen/colors.gen.dart';
-import 'package:Trach/gen/fonts.gen.dart';
 import 'package:flutter/widgets.dart';
 
 @immutable
@@ -43,23 +43,9 @@ class TrackWidget extends StatelessWidget {
           children: [
             Padding(
                 padding: EdgeInsets.only(bottom: 5),
-                child: Text(props.title,
-                    style: TextStyle(
-                        color: ColorName.black,
-                        fontFamily: FontFamily.roboto,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16
-                    )
-                )
+                child: Text(props.title, style: TextStyles.medium(fontSize: 16, color: ColorName.black))
             ),
-            Text(props.artists,
-                style: TextStyle(
-                    color: ColorName.gray9F,
-                    fontFamily: FontFamily.roboto,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16
-                )
-            )
+            Text(props.artists, style: TextStyles.regular(fontSize: 16, color: ColorName.gray9F))
           ],
         )
       ],
