@@ -1,5 +1,6 @@
 import 'package:Trach/chart/chart.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 import 'chart/track.dart';
 import 'chart/position.dart';
