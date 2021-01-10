@@ -1,4 +1,3 @@
-
 import 'package:Trach/gen/colors.gen.dart';
 import 'package:Trach/gen/fonts.gen.dart';
 import 'package:flutter/cupertino.dart';

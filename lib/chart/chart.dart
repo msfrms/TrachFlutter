@@ -6,12 +6,13 @@ import 'package:flutter/widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shimmer/shimmer.dart';
-import 'chart_status.dart';
+part 'chart.freezed.dart';
 
-@immutable
-class ChartProps {
-  final ChartStatus status;
-  ChartProps({this.status});
+@freezed
+abstract class ChartProps with _$ChartProps {
+  const factory ChartProps.tracks(List<TrackProps> value) = ListOfTrack;
+  const factory ChartProps.inProgress() = InProgress;
+  const factory ChartProps.failed([String message]) = Failed;
 }
 
 @immutable
@@ -22,7 +23,7 @@ class ChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return props.status.when(
+    return props.when(
         tracks: (value) => ListView.builder(
             padding: EdgeInsets.all(8.0),
             physics: BouncingScrollPhysics(),

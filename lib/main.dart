@@ -1,10 +1,8 @@
 import 'package:Trach/chart/chart.dart';
-import 'package:Trach/chart/chart_status.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 
-import 'chart/track.dart';
 import 'chart/position.dart';
+import 'chart/track.dart';
 
 void main() {
   runApp(TrachApp());
@@ -260,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ];
     var chart = ChartWidget(
-      ChartProps(status: ChartStatus.inProgress())
+        ChartProps.tracks(tracks)
     );
     return Scaffold(
       appBar: AppBar(
