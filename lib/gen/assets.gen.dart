@@ -13,6 +13,7 @@ class $AssetsImagesGen {
   AssetGenImage get arrowFillUp =>
       const AssetGenImage('assets/images/arrow_fill_up.png');
   AssetGenImage get more => const AssetGenImage('assets/images/more.png');
+  AssetGenImage get warning => const AssetGenImage('assets/images/warning.png');
 }
 
 class Assets {
