@@ -1,11 +1,9 @@
 import 'package:Trach/chart/position.dart';
-import 'package:Trach/chart/track_placeholder.dart';
 import 'package:Trach/core/text_styles.dart';
 import 'package:Trach/gen/assets.gen.dart';
 import 'package:Trach/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:shimmer/shimmer.dart';
 
 @immutable
 class TrackProps {
@@ -13,8 +11,7 @@ class TrackProps {
   final String coverUrl;
   final String title;
   final String artists;
-  final bool placeholderEnabled;
-  TrackProps({this.position, this.coverUrl, this.title, this.artists, this.placeholderEnabled = false});
+  TrackProps({this.position, this.coverUrl, this.title, this.artists});
 }
 
 @immutable
@@ -55,22 +52,15 @@ class TrackWidget extends StatelessWidget {
       ],
     );
 
-    if (props.placeholderEnabled)
-      return Shimmer.fromColors(
-          child: Padding(padding: EdgeInsets.all(8), child: TrackPlaceholderWidget()),
-          baseColor: Colors.grey[300],
-          highlightColor: Colors.grey[100]
-      );
-    else
-      return Padding(
-        padding: EdgeInsets.all(8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            content,
-            Image(image: Assets.images.more),
-          ],
-        ),
-      );
+    return Padding(
+      padding: EdgeInsets.all(8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          content,
+          Image(image: Assets.images.more),
+        ],
+      ),
+    );
   }
 }

@@ -1,8 +1,8 @@
+import 'package:Trach/core/text_styles.dart';
 import 'package:Trach/gen/assets.gen.dart';
 import 'package:Trach/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:Trach/core/text_styles.dart';
 
 enum PositionChange {
   increment, decrement, unchanged
