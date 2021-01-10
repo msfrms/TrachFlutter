@@ -1,4 +1,5 @@
 import 'package:Trach/chart/chart.dart';
+import 'package:Trach/chart/chart_status.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -76,8 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    var chart = ChartWidget(
-      ChartProps(tracks: [
+    var tracks = [
         TrackProps(
             position: PositionProps(
                 value: "1",
@@ -258,7 +258,9 @@ class _MyHomePageState extends State<MyHomePage> {
             title: "Kosandra",
             artists: "Miyagi & Andy Panda"
         )
-      ])
+      ];
+    var chart = ChartWidget(
+      ChartProps(status: ChartStatus.inProgress())
     );
     return Scaffold(
       appBar: AppBar(
