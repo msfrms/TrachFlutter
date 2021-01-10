@@ -12,7 +12,14 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/arrow_fill_down.png');
   AssetGenImage get arrowFillUp =>
       const AssetGenImage('assets/images/arrow_fill_up.png');
+  AssetGenImage get arrowOutDown =>
+      const AssetGenImage('assets/images/arrow_out_down.png');
+  AssetGenImage get arrowOutLeft =>
+      const AssetGenImage('assets/images/arrow_out_left.png');
+  AssetGenImage get arrowOutRight =>
+      const AssetGenImage('assets/images/arrow_out_right.png');
   AssetGenImage get more => const AssetGenImage('assets/images/more.png');
+  AssetGenImage get warning => const AssetGenImage('assets/images/warning.png');
 }
 
 class Assets {

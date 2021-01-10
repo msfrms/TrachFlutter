@@ -20,4 +20,13 @@ class TextStyles {
         fontSize: fontSize
     );
   }
+
+  static TextStyle light({double fontSize, Color color = ColorName.black}) {
+    return TextStyle(
+        color: color,
+        fontFamily: FontFamily.roboto,
+        fontWeight: FontWeight.w300,
+        fontSize: fontSize
+    );
+  }
 }

@@ -257,8 +257,9 @@ class _MyHomePageState extends State<MyHomePage> {
             artists: "Miyagi & Andy Panda"
         )
       ];
+    // "Упс, что то пошло не так! Мы уже работаем над этой проблемой."
     var chart = ChartWidget(
-        ChartProps.tracks(tracks)
+        ChartProps.failed("Упс, что то пошло не так! Мы уже работаем над этой проблемой.")
     );
     return Scaffold(
       appBar: AppBar(
