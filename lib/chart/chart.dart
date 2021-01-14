@@ -26,7 +26,6 @@ class ChartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return props.when(
         tracks: (value) => ListView.builder(
-            padding: EdgeInsets.all(8.0),
             physics: BouncingScrollPhysics(),
             itemCount: value.length,
             itemBuilder: (context, index) {
