@@ -18,6 +18,8 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/arrow_out_left.png');
   AssetGenImage get arrowOutRight =>
       const AssetGenImage('assets/images/arrow_out_right.png');
+  AssetGenImage get list => const AssetGenImage('assets/images/list.png');
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
   AssetGenImage get more => const AssetGenImage('assets/images/more.png');
   AssetGenImage get warning => const AssetGenImage('assets/images/warning.png');
 }
